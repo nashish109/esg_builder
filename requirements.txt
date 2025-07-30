@@ -1,0 +1,30 @@
+# Data Collection
+scrapy
+beautifulsoup4
+requests
+feedparser
+
+# NLP
+transformers
+spacy
+torch
+datasets
+accelerate
+
+# Backend
+fastapi
+uvicorn
+
+# Database
+psycopg2-binary
+pymongo
+sqlalchemy
+
+# Dashboard
+streamlit
+plotly
+requests
+
+# Testing
+pytest
+httpx
