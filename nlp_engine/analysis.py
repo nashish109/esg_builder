@@ -1,17 +1,9 @@
 from transformers import pipeline, AutoTokenizer, AutoModelForSequenceClassification
 import torch
 
-# Load the fine-tuned model
-# Note: The path should point to the directory where the fine-tuned model is saved.
-FINE_TUNED_MODEL_PATH = "./models/finbert-esg-sentiment"
-
-try:
-    tokenizer = AutoTokenizer.from_pretrained(FINE_TUNED_MODEL_PATH)
-    model = AutoModelForSequenceClassification.from_pretrained(FINE_TUNED_MODEL_PATH)
-    sentiment_analyzer = pipeline("sentiment-analysis", model=model, tokenizer=tokenizer)
-except OSError:
-    print(f"Fine-tuned model not found at '{FINE_TUNED_MODEL_PATH}'. Falling back to default model.")
-    sentiment_analyzer = pipeline("sentiment-analysis", model="ProsusAI/finbert")
+# Load the sentiment analysis model
+# Using ProsusAI/finbert for ESG sentiment analysis
+sentiment_analyzer = pipeline("sentiment-analysis", model="ProsusAI/finbert")
 
 
 def analyze_sentiment(text):
@@ -172,22 +164,60 @@ def detect_controversy(text):
     
     return found_controversies
 
-CONTROVERSY_KEYWORDS = {
-    "environmental": ["greenwashing", "environmental disaster", "pollution scandal"],
-    "social": ["labor strike", "child labor", "workplace safety violation"],
-    "governance": ["corruption", "bribery", "insider trading", "accounting fraud"]
-}
-
-def detect_controversy(text):
+def calculate_esg_score_from_nlp(sentiment_result, entities, controversies):
     """
-    Detects potential ESG controversies in a given text.
+    Calculates ESG scores based on NLP analysis results.
+    Returns a dictionary with environmental, social, governance, and total scores.
     """
-    text = text.lower()
-    found_controversies = {"environmental": [], "social": [], "governance": []}
+    base_score = 50  # Neutral base score
 
-    for category, keywords in CONTROVERSY_KEYWORDS.items():
-        for keyword in keywords:
-            if keyword in text:
-                found_controversies[category].append(keyword)
-    
-    return found_controversies
+    # Initialize category scores
+    scores = {
+        "environmental": base_score,
+        "social": base_score,
+        "governance": base_score
+    }
+
+    # Adjust scores based on sentiment
+    if sentiment_result:
+        sentiment_label = sentiment_result.get('label', '').lower()
+        sentiment_score = sentiment_result.get('score', 0)
+
+        if sentiment_label == 'positive':
+            # Boost all categories based on sentiment strength
+            boost = sentiment_score * 20  # Max 20 points
+            for category in scores:
+                scores[category] += boost
+        elif sentiment_label == 'negative':
+            # Reduce all categories based on sentiment strength
+            reduction = sentiment_score * 20  # Max 20 points reduction
+            for category in scores:
+                scores[category] -= reduction
+
+    # Adjust scores based on ESG entities found
+    entity_points = 5  # Points per entity found
+
+    for category, entity_list in entities.items():
+        if category in scores:
+            scores[category] += len(entity_list) * entity_points
+
+    # Adjust scores based on controversies detected
+    controversy_penalty = 10  # Points deducted per controversy
+
+    for category, controversy_list in controversies.items():
+        if category in scores:
+            scores[category] -= len(controversy_list) * controversy_penalty
+
+    # Ensure scores are within 0-100 range
+    for category in scores:
+        scores[category] = max(0, min(100, scores[category]))
+
+    # Calculate total score as average of the three pillars
+    total_score = round((scores["environmental"] + scores["social"] + scores["governance"]) / 3, 2)
+
+    return {
+        "environmental_score": round(scores["environmental"], 2),
+        "social_score": round(scores["social"], 2),
+        "governance_score": round(scores["governance"], 2),
+        "total_score": total_score
+    }

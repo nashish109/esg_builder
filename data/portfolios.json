@@ -1,0 +1,57 @@
+[
+  {
+    "id": 1,
+    "name": "Tech Giants Portfolio",
+    "companies": [
+      {
+        "id": 1
+      },
+      {
+        "id": 3
+      },
+      {
+        "id": 5
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Innovation Leaders",
+    "companies": [
+      {
+        "id": 2
+      },
+      {
+        "id": 4
+      },
+      {
+        "id": 5
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Sustainable Tech",
+    "companies": [
+      {
+        "id": 1
+      },
+      {
+        "id": 2
+      },
+      {
+        "id": 3
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "ESG Portfolio - Moderate",
+    "description": "AI-generated portfolio with ESG focus. Adjusted risk - Portfolio ESG profile differs from moderate target.",
+    "companies": [
+      {
+        "id": 3
+      }
+    ]
+  }
+]

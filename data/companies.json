@@ -1,0 +1,51 @@
+[
+  {
+    "id": 1,
+    "name": "Apple Inc.",
+    "ticker": "AAPL",
+    "sector": "Technology",
+    "region": "North America"
+  },
+  {
+    "id": 3,
+    "name": "Microsoft Corporation",
+    "ticker": "MSFT",
+    "sector": "Technology",
+    "region": "North America"
+  },
+  {
+    "id": 4,
+    "name": "Amazon.com Inc.",
+    "ticker": "AMZN",
+    "sector": "E-commerce",
+    "region": "North America"
+  },
+  {
+    "id": 5,
+    "name": "Google LLC",
+    "ticker": "GOOGL",
+    "sector": "Technology",
+    "region": "North America"
+  },
+  {
+    "name": "Tesla, Inc.",
+    "ticker": "TSLA (NASDAQ)",
+    "sector": "Technology",
+    "region": "North America",
+    "id": 6
+  },
+  {
+    "name": "Reliance",
+    "ticker": "RLA",
+    "sector": "E-commerce",
+    "region": "Asia(India)",
+    "id": 7
+  },
+  {
+    "name": "NVDIA",
+    "ticker": "NVD(NASDAQ)",
+    "sector": "Technology",
+    "region": "North America",
+    "id": 8
+  }
+]

@@ -1,6 +1,6 @@
 # ESG Builder Project Setup
 
-This document outlines the initial project structure and file contents for the ESG Builder application.
+This document outlines the simplified project structure for the ESG Builder standalone dashboard application. The project has been streamlined to remove database dependencies and backend API, focusing on a dashboard that loads data from local JSON files.
 
 ## 1. Directory Structure
 
@@ -14,8 +14,14 @@ esg_builder/
 ├── config/
 │   ├── __init__.py
 │   └── settings.py
+├── data/
+│   ├── companies.json
+│   ├── esg_scores.json
+│   ├── portfolios.json
+│   └── news.json
 ├── data_collection/
 │   ├── __init__.py
+│   ├── scheduler.py
 │   ├── scrapers/
 │   │   ├── __init__.py
 │   │   ├── news_scraper.py
@@ -25,20 +31,6 @@ esg_builder/
 │   ├── __init__.py
 │   ├── analysis.py
 │   └── models/
-├── backend/
-│   ├── __init__.py
-│   ├── app.py
-│   ├── api/
-│   │   ├── __init__.py
-│   │   └── routes.py
-│   └── services/
-│       ├── __init__.py
-│       ├── portfolio_service.py
-│       └── esg_service.py
-├── database/
-│   ├── __init__.py
-│   ├── postgres_setup.sql
-│   └── mongo_setup.py
 ├── dashboard/
 │   ├── __init__.py
 │   └── app.py
@@ -46,7 +38,7 @@ esg_builder/
     ├── __init__.py
     ├── test_data_collection.py
     ├── test_nlp_engine.py
-    └── test_backend.py
+    └── test_dashboard.py
 ```
 
 ## 2. File Contents

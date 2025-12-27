@@ -1,8 +1,7 @@
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
-from pymongo import MongoClient
-from config.settings import SQLALCHEMY_DATABASE_URL, MONGO_URI
+from config.settings import SQLALCHEMY_DATABASE_URL
 
 # --- Database Setup (now using SQLite) ---
 engine = create_engine(
@@ -17,10 +16,3 @@ def get_db():
         yield db
     finally:
         db.close()
-
-# --- MongoDB Setup ---
-mongo_client = MongoClient(MONGO_URI)
-mongo_db = mongo_client.get_default_database()
-
-def get_mongo_db():
-    return mongo_db

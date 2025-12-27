@@ -11,7 +11,10 @@ SQLALCHEMY_DATABASE_URL = "sqlite:///./esg_builder.db"
 # POSTGRES_HOST = os.environ.get("POSTGRES_HOST", "localhost")
 # POSTGRES_PORT = os.environ.get("POSTGRES_PORT", "5432")
 
-MONGO_URI = os.environ.get("MONGO_URI", "mongodb://localhost:27017/esg_data")
+
 
 # News API settings
-NEWS_API_KEY = os.environ.get("NEWS_API_KEY", "[Enter Your Key Here]")
+NEWS_API_KEY = os.environ.get("NEWS_API_KEY", "e5757131ff244f7db5a79d51c458646d")
+
+# Web scraping settings
+USER_AGENT = "ESG Builder Scraper/1.0"

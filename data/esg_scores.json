@@ -1,0 +1,146 @@
+[
+  {
+    "company_id": 1,
+    "rating_date": "2023-01-01",
+    "environmental_score": 96.66,
+    "social_score": 81.26,
+    "governance_score": 82.34,
+    "total_score": 86.76,
+    "source": "Enhanced Data"
+  },
+  {
+    "company_id": 1,
+    "rating_date": "2023-06-01",
+    "environmental_score": 93.01,
+    "social_score": 91.0,
+    "governance_score": 87.11,
+    "total_score": 90.37,
+    "source": "Enhanced Data"
+  },
+  {
+    "company_id": 1,
+    "rating_date": "2024-01-01",
+    "environmental_score": 100,
+    "social_score": 67.72,
+    "governance_score": 93.88,
+    "total_score": 87.2,
+    "source": "Enhanced Data"
+  },
+  {
+    "company_id": 1,
+    "rating_date": "2024-06-01",
+    "environmental_score": 86.6,
+    "social_score": 90.93,
+    "governance_score": 93.06,
+    "total_score": 90.2,
+    "source": "Enhanced Data"
+  },
+  {
+    "company_id": 3,
+    "rating_date": "2023-01-01",
+    "environmental_score": 89.68,
+    "social_score": 84.29,
+    "governance_score": 90.11,
+    "total_score": 88.02,
+    "source": "Enhanced Data"
+  },
+  {
+    "company_id": 3,
+    "rating_date": "2023-06-01",
+    "environmental_score": 100,
+    "social_score": 87.3,
+    "governance_score": 92.8,
+    "total_score": 93.37,
+    "source": "Enhanced Data"
+  },
+  {
+    "company_id": 3,
+    "rating_date": "2024-01-01",
+    "environmental_score": 90.3,
+    "social_score": 92.8,
+    "governance_score": 92.2,
+    "total_score": 91.77,
+    "source": "Enhanced Data"
+  },
+  {
+    "company_id": 3,
+    "rating_date": "2024-06-01",
+    "environmental_score": 95.5,
+    "social_score": 90.67,
+    "governance_score": 96.89,
+    "total_score": 94.36,
+    "source": "Enhanced Data"
+  },
+  {
+    "company_id": 4,
+    "rating_date": "2023-01-01",
+    "environmental_score": 80.73,
+    "social_score": 64.55,
+    "governance_score": 80.47,
+    "total_score": 75.25,
+    "source": "Enhanced Data"
+  },
+  {
+    "company_id": 4,
+    "rating_date": "2023-06-01",
+    "environmental_score": 80.48,
+    "social_score": 72.4,
+    "governance_score": 77.38,
+    "total_score": 76.75,
+    "source": "Enhanced Data"
+  },
+  {
+    "company_id": 4,
+    "rating_date": "2024-01-01",
+    "environmental_score": 88.74,
+    "social_score": 78.97,
+    "governance_score": 78.39,
+    "total_score": 82.04,
+    "source": "Enhanced Data"
+  },
+  {
+    "company_id": 4,
+    "rating_date": "2024-06-01",
+    "environmental_score": 71.38,
+    "social_score": 83.77,
+    "governance_score": 80.85,
+    "total_score": 78.67,
+    "source": "Enhanced Data"
+  },
+  {
+    "company_id": 5,
+    "rating_date": "2023-01-01",
+    "environmental_score": 78.0,
+    "social_score": 100,
+    "governance_score": 89.47,
+    "total_score": 89.16,
+    "source": "Enhanced Data"
+  },
+  {
+    "company_id": 5,
+    "rating_date": "2023-06-01",
+    "environmental_score": 83.48,
+    "social_score": 96.26,
+    "governance_score": 94.49,
+    "total_score": 91.41,
+    "source": "Enhanced Data"
+  },
+  {
+    "company_id": 5,
+    "rating_date": "2024-01-01",
+    "environmental_score": 96.75,
+    "social_score": 86.28,
+    "governance_score": 89.43,
+    "total_score": 90.82,
+    "source": "Enhanced Data"
+  },
+  {
+    "company_id": 5,
+    "rating_date": "2024-06-01",
+    "environmental_score": 96.9,
+    "social_score": 82.33,
+    "governance_score": 91.54,
+    "total_score": 90.25,
+    "source": "Enhanced Data"
+  }
+]
