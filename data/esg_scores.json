@@ -142,5 +142,113 @@
     "governance_score": 91.54,
     "total_score": 90.25,
     "source": "Enhanced Data"
+  },
+  {
+    "company_id": 6,
+    "rating_date": "2025-01-04",
+    "environmental_score": 60.9,
+    "social_score": 73.6,
+    "governance_score": 76.2,
+    "total_score": 70.2,
+    "source": "Generated"
+  },
+  {
+    "company_id": 6,
+    "rating_date": "2025-04-04",
+    "environmental_score": 88.3,
+    "social_score": 63.5,
+    "governance_score": 72.2,
+    "total_score": 74.7,
+    "source": "Generated"
+  },
+  {
+    "company_id": 6,
+    "rating_date": "2025-07-03",
+    "environmental_score": 73.5,
+    "social_score": 65.5,
+    "governance_score": 72.7,
+    "total_score": 70.6,
+    "source": "Generated"
+  },
+  {
+    "company_id": 6,
+    "rating_date": "2025-10-01",
+    "environmental_score": 84.8,
+    "social_score": 84.8,
+    "governance_score": 91.2,
+    "total_score": 86.9,
+    "source": "Generated"
+  },
+  {
+    "company_id": 7,
+    "rating_date": "2025-01-04",
+    "environmental_score": 68.0,
+    "social_score": 65.6,
+    "governance_score": 84.0,
+    "total_score": 72.5,
+    "source": "Generated"
+  },
+  {
+    "company_id": 7,
+    "rating_date": "2025-04-04",
+    "environmental_score": 83.6,
+    "social_score": 74.3,
+    "governance_score": 61.1,
+    "total_score": 73.0,
+    "source": "Generated"
+  },
+  {
+    "company_id": 7,
+    "rating_date": "2025-07-03",
+    "environmental_score": 83.9,
+    "social_score": 89.0,
+    "governance_score": 60.2,
+    "total_score": 77.7,
+    "source": "Generated"
+  },
+  {
+    "company_id": 7,
+    "rating_date": "2025-10-01",
+    "environmental_score": 69.1,
+    "social_score": 88.4,
+    "governance_score": 65.9,
+    "total_score": 74.5,
+    "source": "Generated"
+  },
+  {
+    "company_id": 8,
+    "rating_date": "2025-01-04",
+    "environmental_score": 74.4,
+    "social_score": 76.0,
+    "governance_score": 83.2,
+    "total_score": 77.9,
+    "source": "Generated"
+  },
+  {
+    "company_id": 8,
+    "rating_date": "2025-04-04",
+    "environmental_score": 76.9,
+    "social_score": 74.0,
+    "governance_score": 62.8,
+    "total_score": 71.2,
+    "source": "Generated"
+  },
+  {
+    "company_id": 8,
+    "rating_date": "2025-07-03",
+    "environmental_score": 83.6,
+    "social_score": 88.2,
+    "governance_score": 83.4,
+    "total_score": 85.1,
+    "source": "Generated"
+  },
+  {
+    "company_id": 8,
+    "rating_date": "2025-10-01",
+    "environmental_score": 91.4,
+    "social_score": 87.9,
+    "governance_score": 64.1,
+    "total_score": 81.1,
+    "source": "Generated"
   }
 ]

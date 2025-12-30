@@ -55,8 +55,13 @@ def main_page():
             st.error(f"Error loading companies: {e}")
             return []
 
-    @st.cache_data(ttl=600)
     def get_esg_scores(company_id):
+        file_path = DATA_DIR / "esg_scores.json"
+        mtime = os.path.getmtime(file_path)
+        return _get_esg_scores_cached(company_id, mtime)
+
+    @st.cache_data(ttl=600)
+    def _get_esg_scores_cached(company_id, mtime):
         try:
             with open(DATA_DIR / "esg_scores.json", "r") as f:
                 all_scores = json.load(f)
@@ -110,8 +115,13 @@ def main_page():
     # --- Portfolio Comparison ---
     st.markdown('<h2 class="section-header">📊 Portfolio Comparison</h2>', unsafe_allow_html=True)
 
-    @st.cache_data(ttl=600)
     def get_portfolios():
+        file_path = DATA_DIR / "portfolios.json"
+        mtime = os.path.getmtime(file_path)
+        return _get_portfolios_cached(mtime)
+
+    @st.cache_data(ttl=600)
+    def _get_portfolios_cached(mtime):
         try:
             with open(DATA_DIR / "portfolios.json", "r") as f:
                 return json.load(f)
@@ -158,8 +168,13 @@ def main_page():
     # --- ESG News Alerts ---
     st.markdown('<h2 class="section-header">📰 ESG News Alerts</h2>', unsafe_allow_html=True)
 
-    @st.cache_data(ttl=3600)
     def get_news():
+        file_path = DATA_DIR / "news.json"
+        mtime = os.path.getmtime(file_path)
+        return _get_news_cached(mtime)
+
+    @st.cache_data(ttl=3600)
+    def _get_news_cached(mtime):
         try:
             with open(DATA_DIR / "news.json", "r") as f:
                 return json.load(f)

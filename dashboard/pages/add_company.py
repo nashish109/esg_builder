@@ -43,17 +43,27 @@ def generate_initial_esg_scores(company_id):
     base_date = datetime.now().replace(day=1, month=((datetime.now().month - 1) // 3) * 3 + 1)
     for i in range(4):
         score_date = base_date - timedelta(days=90 * (3 - i))
-        # Generate a random score between 70-95, similar to existing data
-        score = round(random.uniform(70, 95), 1)
+        # Generate random scores for each pillar between 60-95, similar to existing data
+        environmental_score = round(random.uniform(60, 95), 1)
+        social_score = round(random.uniform(60, 95), 1)
+        governance_score = round(random.uniform(60, 95), 1)
+        total_score = round((environmental_score + social_score + governance_score) / 3, 1)
 
         esg_scores.append({
             "company_id": company_id,
             "rating_date": score_date.strftime("%Y-%m-%d"),
-            "total_score": score
+            "environmental_score": environmental_score,
+            "social_score": social_score,
+            "governance_score": governance_score,
+            "total_score": total_score,
+            "source": "Generated"
         })
 
-    with open(DATA_DIR / "esg_scores.json", "w") as f:
-        json.dump(esg_scores, f, indent=2)
+    try:
+        with open(DATA_DIR / "esg_scores.json", "w") as f:
+            json.dump(esg_scores, f, indent=2)
+    except Exception as e:
+        st.error(f"Error saving ESG scores: {e}")
 
 def page():
     st.header("Add / Update Company")
