@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  backend:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./esg_builder.db:/app/esg_builder.db  # Mount SQLite database
+      - ./data:/app/data  # Mount data files if needed
+    env_file:
+      - .env
+    environment:
+      - PYTHONPATH=/app
+    restart: unless-stopped

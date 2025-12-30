@@ -47,5 +47,12 @@
     "sector": "Technology",
     "region": "North America",
     "id": 8
+  },
+  {
+    "name": "JPMorgan Chase & Co.",
+    "ticker": "JPM (NYSE)",
+    "sector": "Financial Services",
+    "region": "North America",
+    "id": 9
   }
 ]

@@ -24,4 +24,6 @@ pdfplumber
 # API
 fastapi
 uvicorn
+gunicorn
+python-dotenv
 pydantic
